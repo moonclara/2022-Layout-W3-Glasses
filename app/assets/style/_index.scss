@@ -1,0 +1,215 @@
+body {
+    line-height: 1.5;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px $spacer*2;
+}
+
+/* header */
+.header {
+    background: $mediumRed;
+    color: $white;
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    h1 {
+        display: block;
+        width: 80px;
+        height: 48px;
+        background: url(../images/logo-white.png);
+        background-size: cover;
+        /* 圖片取代文字技巧 */
+        text-indent: 101%;
+        white-space: nowrap;
+        overflow: hidden;
+        margin: $spacer*2 0px;
+    }
+
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: $size*1.25;
+
+        li {
+            margin-left: $spacer*8;
+        }
+
+        li:hover {
+            font-weight: 700;
+            text-decoration: underline;
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    .header {
+        .container {
+            flex-direction: column;
+            padding: unset;
+        }
+
+        h1 {
+            margin: $spacer*2 0;
+        }
+
+        .nav {
+            text-align: center;
+            width: 100%;
+            font-size: $size;
+
+            li {
+                width: 50%;
+                padding: $spacer*1.5 0px;
+                margin-left: unset;
+                outline: 1px $white solid;
+            }
+
+            li:hover {
+                background: $darkRed;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.footer {
+    background: $mediumRed;
+    color: $white;
+
+    .top-footer {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #db9694;
+        padding-top: $spacer*6;
+        padding-bottom: $spacer*4;
+    }
+
+    .nav-footer {
+        display: flex;
+
+        li {
+            padding: 22px 48px 22px 0;
+        }
+
+        li:hover {
+            font-weight: 700;
+            text-decoration: underline;
+        }
+    }
+
+    .contact-footer {
+        font-size: $size*2.25;
+
+        li {
+            display: flex;
+            align-items: center;
+
+            span {
+                margin-right: $spacer*2.75;
+            }
+        }
+    }
+
+    .sidebar-footer img {
+        width: 48px;
+        height: 48px;
+        margin-left: $spacer*4;
+    }
+
+    .bottom-footer {
+        display: flex;
+        justify-content: space-between;
+        padding: $spacer*4 0px;
+
+        .link {
+            display: flex;
+            font-size: $size*0.875;
+
+            li {
+                margin-left: $spacer*6;
+            }
+
+            li:hover {
+                font-weight: 700;
+                text-decoration: underline;
+            }
+        }
+
+    }
+}
+
+@media(max-width: 992px) {
+    .footer {
+        .nav-footer {
+            li {
+                padding: 10px 32px 22px 0;
+            }
+        }
+    }
+
+}
+
+@media(max-width: 767px) {
+    .footer {
+        .top-footer {
+            padding-top: $spacer*3;
+            padding-bottom: $spacer*3;
+        }
+
+        .nav-footer {
+            display: none;
+        }
+
+        .contact-footer {
+            font-size: $size;
+
+            li {
+                span {
+                    margin-right: $spacer*1.375;
+                }
+            }
+        }
+
+        .sidebar-footer {
+            img {
+                width: 24px;
+                height: 24px;
+                margin-left: $spacer;
+            }
+        }
+
+
+        .bottom-footer {
+            flex-direction: column;
+            padding-top: $spacer*2;
+            padding-bottom: $spacer*3;
+
+            .link {
+                flex-wrap: wrap;
+                font-size: $size;
+
+                li {
+                    margin-left: unset;
+                    width: 100%;
+                    margin-top: $spacer;
+                }
+            }
+        }
+    }
+}
