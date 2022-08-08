@@ -1,16 +1,3 @@
-//color
-// $white: #ffffff;
-// $black: #000000;
-// $lightRed: #FBF2F2;
-// $mediumRed: #AA0601;
-// $darkRed: #650300;
-// $lightGray: #DEE2E6;
-// $mediumGray: #D6D6D6;
-// $darkGray: #707070;
-
-//text
-// $size: 16px;
-
 // 間距
 $spacer-base: 1rem; //16px
 $spacer-sm: $spacer-base * 0.5; //8px
@@ -19,11 +6,6 @@ $spacer-lg: $spacer-base * 3; //48px
 $spacer-xl: $spacer-base * 4; //64px
 $spacer-2xl: $spacer-base * 5; //80px
 $spacer-3xl: $spacer-base * 6; //96px
-
-
-
-// $spacer: 8px;
-
 
 //字體、行高、大小
 $font-size-base: 1rem; //16px
@@ -36,7 +18,6 @@ $h5-font-size: $font-size-base * 1.25; //20px
 $h6-font-size: $font-size-base * 1.125; //18px
 
 $font-style-italic: italic;
-
 
 //色彩
 $primary: #AA0601;
